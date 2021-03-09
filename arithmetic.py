@@ -83,10 +83,17 @@ def arithmetic_arranger(al, solved=False):
     #print(longest)
     #white_spacing = 4 
     line_len =  express['width_sum'] + (num_expresions-1)
-    print(express['top_print'])
-    print(express['bottom_print'])
-    print(express['line_print'])
+
+    return_str = express['top_print'] +'\n'+express['bottom_print'] +'\n'+express['line_print']
+    #print(express['top_print'])
+    #print(express['bottom_print'])
+    #print(express['line_print'])
     if solved:
-        print(express['results_print'])
-arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True)
-arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
+        #print(express['results_print'])
+        return_str += ('\n'+express['results_print'])
+    
+    return return_str
+
+print(arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True))
+print('\n')
+print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
